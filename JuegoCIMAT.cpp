@@ -8,112 +8,47 @@ int main()
 
     setlocale(LC_ALL, "");
 
-    string dificultad;
-    int pregunta;
+    int pregunta, dificultad;
+    bool fin = false;
 
-    cout << "Seleccione la dificultad" << endl;
-    cout << "Facil" << endl;
-    cout << "Dificil" << endl;
-    cin >> dificultad;
-
-    if (dificultad == "facil")
+    while (true)
     {
+        cout << "Seleccione la dificultad" << endl;
+        cout << "0. Salir" << endl;
+        cout << "1. Facil" << endl;
+        cout << "2. Dificil" << endl;
+        cin >> dificultad;
 
-        cout << "Ha seleccionado la dificultad: Facil" << endl;
-
-        cout << "Seleccione la pregunta" << endl;
-        cout << "1. " << endl;
-        cout << "2. " << endl;
-        cout << "3. " << endl;
-        cout << "4. " << endl;
-        cout << "5. " << endl;
-        cin >> pregunta;
-
-        switch (pregunta)
+        if (dificultad == 0)
         {
+            cout << "Ha salido del juego" << endl;
+            return 0;
+        }
 
-        case 1:
-
-            cout << "Uno" << endl;
-
-            break;
-
-        case 2:
-
-            cout << "2" << endl;
-
-            break;
-
-        case 3:
-
-            cout << "3" << endl;
-
-            break;
-
-        case 4:
-
-            cout << "4" << endl;
-
-            break;
-        case 5:
-
-            cout << "5" << endl;
-
-            break;
-
-        default:
+        if (dificultad == 1 || dificultad == 2)
+        {
             break;
         }
-    }
-    else
-    {
 
-        cout << "Ha seleccionado la dificultad: Dificil" << endl;
-        
-        cout << "Seleccione la pregunta" << endl;
-        cout << "1. " << endl;
-        cout << "2. " << endl;
-        cout << "3. " << endl;
-        cout << "4. " << endl;
-        cout << "5. " << endl;
-        cin >> pregunta;
-
-        switch (pregunta)
+        else
         {
-
-        case 1:
-
-            cout << "1" << endl;
-
-            break;
-
-        case 2:
-
-            cout << "2" << endl;
-
-            break;
-
-        case 3:
-
-            cout << "3" << endl;
-
-            break;
-
-        case 4:
-
-            cout << "4" << endl;
-
-            break;
-        case 5:
-
-            cout << "5" << endl;
-
-            break;
-
-        default:
-            break;
+            cout << "Ingrese una opcion valida" << endl;
         }
+
+    } // ciclo while de opciones 
+
+    cout << "Bienvenido" << endl;
+
+    if(dificultad == 1)
+    
+    {
+        cout<<"Ha seleccionado la dificultad : Facil"<<endl;
     }
 
-    return 0;
-}
+    if (dificultad == 2)
+    {
+        cout<<"Ha seleccionado la dificultad : Dificil"<<endl;
+    }
+    
+
+} // main
