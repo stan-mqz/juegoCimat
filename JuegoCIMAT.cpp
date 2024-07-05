@@ -221,7 +221,7 @@ int main()
             else
             {
                 cout << "Ha salido del juego. Gracias por jugar" << "\n";
-                break;
+                return 0;
             }
         } // fin del ciclo de preguntas
 
